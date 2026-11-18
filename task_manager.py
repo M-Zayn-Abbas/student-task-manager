@@ -20,3 +20,10 @@ class TaskManager:
     def __init__(self):
         self.tasks = []
         self.next_id = 1
+
+    def add_task(self, title):
+        """Create a new task with the given title and return it."""
+        task = Task(self.next_id, title)
+        self.tasks.append(task)
+        self.next_id += 1
+        return task
