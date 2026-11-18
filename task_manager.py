@@ -39,3 +39,9 @@ class TaskManager:
             return
         for task in self.tasks:
             print(task)
+
+    def complete_task(self, task_id):
+        """Mark the task with the given id as completed."""
+        for task in self.tasks:
+            if task.id == task_id:
+                task.completed = True
