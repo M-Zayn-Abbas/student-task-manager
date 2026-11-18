@@ -35,7 +35,7 @@ class TestTaskManager(unittest.TestCase):
         task = self.manager.add_task("Submit assignment")
         result = self.manager.delete_task(task.id)
         self.assertTrue(result)
-        self.assertEqual(len(self.manager.get_tasks()), 1)
+        self.assertEqual(len(self.manager.get_tasks()), 0)
 
     def test_delete_invalid_task(self):
         self.manager.add_task("Keep me")
