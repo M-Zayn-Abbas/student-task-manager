@@ -1,6 +1,6 @@
 # student-task-manager
 
-Project status:  In Progress
+Project status: Completed
 
 
 A simple Python console application for students to manage their tasks.
@@ -22,4 +22,5 @@ python main.py
 
 Developed as part of the DevOps
 
+Author: M. Zayn Abbas
 
