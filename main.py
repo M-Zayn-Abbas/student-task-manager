@@ -1,0 +1,44 @@
+"""Console interface for the Student Task Manager."""
+
+from task_manager import TaskManager
+
+
+def show_menu():
+    print("\n===== Student Task Manager =====")
+    print("1. Add task")
+    print("2. Display tasks")
+    print("3. Complete task")
+    print("4. Delete task")
+    print("5. Exit")
+
+
+def main():
+    manager = TaskManager()
+
+    while True:
+        show_menu()
+        choice = input("Choose an option (1-5): ").strip()
+
+        if choice == "1":
+            title = input("Enter task title: ")
+            task = manager.add_task(title)
+            print(f"Task added: {task}")
+        elif choice == "2":
+            manager.display_tasks()
+        elif choice == "3":
+            task_id = int(input("Enter task ID to complete: "))
+            manager.complete_task(task_id)
+            print("Task marked as completed.")
+        elif choice == "4":
+            task_id = int(input("Enter task ID to delete: "))
+            manager.delete_task(task_id)
+            print("Task deleted.")
+        elif choice == "5":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid option, please try again.")
+
+
+if __name__ == "__main__":
+    main()
