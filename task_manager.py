@@ -45,3 +45,7 @@ class TaskManager:
         for task in self.tasks:
             if task.id == task_id:
                 task.completed = True
+
+    def delete_task(self, task_id):
+        """Remove the task with the given id."""
+        self.tasks = [task for task in self.tasks if task.id != task_id]
