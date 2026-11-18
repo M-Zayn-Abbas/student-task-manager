@@ -26,9 +26,14 @@ def main():
         elif choice == "2":
             manager.display_tasks()
         elif choice == "3":
-            task_id = int(input("Enter task ID to complete: "))
-            manager.complete_task(task_id)
-            print("Task marked as completed.")
+            manager.display_tasks()
+            entry = input("Enter task ID to complete: ").strip()
+            if not entry.isdigit():
+                print("Error: Please enter a valid numeric task ID.")
+            elif manager.complete_task(int(entry)):
+                print("Task marked as completed.")
+            else:
+                print(f"Error: No task found with ID {entry}.")
         elif choice == "4":
             task_id = int(input("Enter task ID to delete: "))
             manager.delete_task(task_id)
