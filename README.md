@@ -1,5 +1,8 @@
 # student-task-manager
 
+Project status: Planning
+
+
 A simple Python console application for students to manage their tasks.
 
 ## Features
@@ -18,3 +21,5 @@ python main.py
 ```
 
 Developed as part of the DevOps
+
+
