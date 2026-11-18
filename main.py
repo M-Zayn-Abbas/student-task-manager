@@ -38,9 +38,13 @@ def main():
             else:
                 print(f"Error: No task found with ID {entry}.")
         elif choice == "4":
-            task_id = int(input("Enter task ID to delete: "))
-            manager.delete_task(task_id)
-            print("Task deleted.")
+            entry = input("Enter task ID to delete: ").strip()
+            if not entry.isdigit():
+                print("Error: Please enter a valid numeric task ID.")
+            elif manager.delete_task(int(entry)):
+                print("Task deleted.")
+            else:
+                print(f"Error: No task found with ID {entry}.")
         elif choice == "5":
             print("Goodbye!")
             break
