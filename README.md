@@ -16,3 +16,5 @@ Requires Python 3.
 ```bash
 python main.py
 ```
+
+Developed as part of the DevOps
