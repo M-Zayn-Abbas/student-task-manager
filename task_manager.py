@@ -27,3 +27,15 @@ class TaskManager:
         self.tasks.append(task)
         self.next_id += 1
         return task
+
+    def get_tasks(self):
+        """Return the list of all tasks."""
+        return self.tasks
+
+    def display_tasks(self):
+        """Print all tasks to the console."""
+        if not self.tasks:
+            print("No tasks found.")
+            return
+        for task in self.tasks:
+            print(task)
