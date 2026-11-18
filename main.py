@@ -21,8 +21,11 @@ def main():
 
         if choice == "1":
             title = input("Enter task title: ")
-            task = manager.add_task(title)
-            print(f"Task added: {task}")
+            try:
+                task = manager.add_task(title)
+                print(f"Task added: {task}")
+            except ValueError as error:
+                print(f"Error: {error}")
         elif choice == "2":
             manager.display_tasks()
         elif choice == "3":

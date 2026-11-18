@@ -22,8 +22,13 @@ class TaskManager:
         self.next_id = 1
 
     def add_task(self, title):
-        """Create a new task with the given title and return it."""
-        task = Task(self.next_id, title)
+        """Create a new task with the given title and return it.
+
+        Raises ValueError if the title is empty or only whitespace.
+        """
+        if title is None or not title.strip():
+            raise ValueError("Task title cannot be empty.")
+        task = Task(self.next_id, title.strip())
         self.tasks.append(task)
         self.next_id += 1
         return task
