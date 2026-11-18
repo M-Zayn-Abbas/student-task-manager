@@ -41,10 +41,15 @@ class TaskManager:
             print(task)
 
     def complete_task(self, task_id):
-        """Mark the task with the given id as completed."""
+        """Mark the task with the given id as completed.
+
+        Returns True if the task was found, otherwise False.
+        """
         for task in self.tasks:
             if task.id == task_id:
                 task.completed = True
+                return True
+        return False
 
     def delete_task(self, task_id):
         """Remove the task with the given id."""
