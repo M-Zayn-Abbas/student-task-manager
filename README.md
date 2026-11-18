@@ -1,1 +1,18 @@
 # student-task-manager
+
+A simple Python console application for students to manage their tasks.
+
+## Features
+
+- Add a new task
+- Display all tasks
+- Mark a task as completed
+- Delete a task
+
+## How to Run
+
+Requires Python 3.
+
+```bash
+python main.py
+```
